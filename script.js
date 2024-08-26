@@ -11,7 +11,7 @@ const typed = new Typed(".multi-text", {
   loop: true,
 });
 
-// Dark mode  
+// Dark mode   
 
 const toggleButton = document.querySelector('.dark-mode-toggle');
 const body = document.querySelector('body');
