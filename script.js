@@ -11,6 +11,22 @@ const typed = new Typed(".multi-text", {
   loop: true,
 });
 
+// Dark mode 
+
+const toggleButton = document.querySelector('.dark-mode-toggle');
+const body = document.querySelector('body');
+const icon = toggleButton.querySelector('i');
+
+toggleButton.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+
+   if (body.classList.contains('dark-mode')) {
+    icon.classList.replace('bx-moon', 'bx-sun');
+  } else {
+    icon.classList.replace('bx-sun', 'bx-moon');
+  }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const skills = document.querySelectorAll('.skill');
 
@@ -25,3 +41,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 400);
   });
 });
+

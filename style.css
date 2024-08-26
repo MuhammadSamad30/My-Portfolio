@@ -13,6 +13,190 @@ html {
   scroll-behavior: smooth;
 }
 
+/*   Dark Mode   */
+
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background-color: #ff7bf8;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: #333;
+    color: #fff;
+  }
+}
+
+.dark-mode-toggle i {
+  font-size: 24px;
+  color: #333;
+
+  &:hover{
+    color: #fff;
+  }
+}
+
+.dark-mode body{
+  background-color: #444;
+}
+.dark-mode {
+  background-color: #444;
+  color: white;
+}
+
+.dark-mode .navbar {
+  background-color: #444;
+}
+
+.dark-mode .navlinks a {
+  color: white;
+}
+
+.dark-mode .logo img {
+   filter: drop-shadow(#ffffff 1px 2px 20px);
+}
+
+.dark-mode .content h1{
+  color: #6aa819d5;
+}
+
+.dark-mode .content h3,
+.dark-mode .content p {
+  color: white;
+}
+
+.dark-mode .content h3 span {
+  color: white;
+}
+
+.dark-mode .container {
+  background-color: #444;
+}
+
+.dark-mode .container .social-media a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  text-decoration: none;
+  font-size: 22px;
+  
+  &:hover {
+    background: #fff;
+    color: #46382d;
+    box-shadow: #ffffff 1px 2px 50px;
+  }
+}
+
+.dark-mode .btn{
+  background-color: #6aa819d5;
+  box-shadow: 0 0 1rem hsl(59, 76%, 48%);
+
+  &:hover{
+    box-shadow: none;
+  }
+}
+
+.dark-mode .about {
+  background-color: #444;
+}
+
+.dark-mode .about h1{
+  color: #ffffff;
+}
+
+.dark-mode .about .right span{
+  color: #6aa819d5;
+}
+
+.dark-mode .card-container {
+  background-color: #444;
+}
+
+.dark-mode .card i{
+  color: #ffffff;
+  filter: drop-shadow(0 0 0.3rem hsl(253, 76%, 48%));
+}
+
+.dark-mode .skills-container{
+  background-color: #444;
+}
+
+.dark-mode  .skills-container .skill-label {
+  color: #ffffff;
+}
+
+.dark-mode .contact-form,
+.contact-form-container{
+  background-color: #444;
+}
+
+.dark-mode .contact-form-container{
+  border-radius: 50px;
+  background-color: #444;
+}
+
+.dark-mode .contact-form h2{
+   color: #fff;
+}
+
+.dark-mode .contact-form label {
+  color: #fff; 
+}
+
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea {
+  background-color: #555;
+  color: #fff; 
+  border: 1px solid #888; 
+}
+
+.dark-mode .contact-form input:focus,
+.dark-mode .contact-form textarea:focus {
+  border-color: #fff;
+  outline: none;
+}
+
+.dark-mode .contact-form input:hover,
+.dark-mode .contact-form textarea:hover {
+  border-color: #ccc;
+  background-color: #666;
+}
+
+.dark-mode .contact-form .form-btn{
+  background-color: #6aa819d5;
+  box-shadow: 0 0 1rem hsl(59, 76%, 48%);
+
+  &:hover{
+    box-shadow: none;
+  }
+}
+
+.dark-mode footer{
+  background-color: #444;
+}
+
+.dark-mode footer i,
+.dark-mode .footer-content p{
+  color: #fff;
+}
+
+/* dark mode end */
+
 .navbar {
   font-family: sans-serif;
   cursor: pointer;
@@ -166,17 +350,17 @@ li a {
 
 .about .left {
   padding: 10px;
-  transition: all 0.3s ease;
 }
 
 .about .left img {
   width: 340px; 
   height: 340px; 
+  transition: all 0.3s ease;
+
   
   &:hover {
     border: none;
     padding: none;
-    background-color: #fff;
     transform: scale(1.1);
   }
 }
@@ -203,6 +387,7 @@ h3 {
   margin: 5px;
   color: #333;
 }
+
 /*                project                */
 
 .card-container {
@@ -384,8 +569,9 @@ input[type="email"] {
   box-shadow: 0 0 1rem hsl(303, 97%, 27%);
   text-decoration: none;
   color: white;
+  border: none;
   font-weight: 500;
-  max-width: 60px;
+  max-width: 90px;
   transition: all 0.3s ease;
   
   &:hover {
@@ -404,16 +590,15 @@ input[type="email"] {
   text-align: center;
 }
 
-.footer-content {
-  color: #666;
+.footer-content p{
+  color: #000000;
 }
 
 .footer-section-social {
   cursor: pointer;
-}
+} 
 
-/*      Responsive                                                            */
-
+/*      Responsive      */
 
 @media (max-width: 600px) {
   body {
@@ -426,14 +611,18 @@ input[type="email"] {
     padding-left: 5px;
   }
   
+  .navdiv{
+    display: flex ;
+  }
+
   .navdiv .logo img{
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     padding-left: 0%;
   }
 
   .navlinks a{
-    font: 13px bold;
+    font: 15px bold;
     margin: auto;
     padding-left: 10%;
   }
