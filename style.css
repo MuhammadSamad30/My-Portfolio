@@ -476,11 +476,6 @@ h3 {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.project-card i {
-  font-size: 50px;
-  margin-bottom: 15px;
-}
-
 .project-card h3 {
   font-size: 22px;
   margin-bottom: 10px;
@@ -524,7 +519,7 @@ h3 {
 }
 
 .project-5 {
-  background-image: linear-gradient(135deg, #cf8824 0%, #c7b4c3 100%);
+  background-image: linear-gradient(135deg, #bea074 0%, #faf3ee 100%);
 }
 
 .project-6 {
@@ -609,7 +604,7 @@ h3 {
 .progress {
   height: 100%;
   width: 0;
-  background-color: #6200ea;
+  background-color: #a18422;
   border-radius: 12.5px 0 0 12.5px;
   display: flex;
   align-items: center;
